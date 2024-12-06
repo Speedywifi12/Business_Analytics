@@ -5,6 +5,14 @@ import pickle
 import requests
 import datetime
 
+PAGES = {
+    f" Welcome": None,
+    f" Feature Analysis": None,
+    f" Attendance Prediction": None
+}
+
+
+
 # Modelle laden
 def load_model(model_path):
     with open(model_path, 'rb') as file:
@@ -12,6 +20,15 @@ def load_model(model_path):
 
 model_with_weather = load_model("./finalized_model_with_weather.sav")
 model_without_weather = load_model("./finalized_model_without_weather.sav")
+
+def welcome_page():
+    logo_path = "images/Unknown.jpeg"
+    col1, col2, col3 = st.columns([1, 1, 1])
+    with col2:
+        st.image(logo_path, width=250)
+# Text for the welcome page
+    welcome_text =
+
 
 # Streamlit-Konfiguration
 st.set_page_config(
